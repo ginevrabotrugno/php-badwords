@@ -20,29 +20,25 @@ $reviewed_text = str_replace($badword, '***', $text);
 </head>
 <body>
 
+    <div class="wrapper">
 
-<div>
-    <h2>Testo Originale</h2>
-    <p>
-        <?php echo $text ?>
-    </p>
-    <span>Il tuo testo è lungo <?php echo strlen($text) ?> caratteri </span>
-</div>
+        <div class="result original">
+            <h2>Testo Originale</h2>
+            <p>
+                <?php echo $text ?>
+            </p>
+            <span>Il tuo testo è lungo <span class="count org"><?php echo strlen($text) ?></span> caratteri </span>
+        </div>
 
-<div>
-    <h2>Testo Censurato</h2>
-    <p>
-        <?php echo $reviewed_text ?>
-    </p>
-    <span>Il tuo testo è lungo <?php echo strlen($reviewed_text) ?> caratteri </span>
-</div>
-   
-   
-    
-   
-    
-    
+        <div class="result reviewed">
+            <h2>Testo Censurato</h2>
+            <p>
+                <?php echo $reviewed_text ?>
+            </p>
+            <span>Il tuo testo è lungo <span class="count rev"><?php echo strlen($reviewed_text) ?></span> caratteri </span>
+        </div>
 
+    </div>
 
 </body>
 </html>
