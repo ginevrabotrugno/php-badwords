@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>PHP Badwords</title>
 </head>
@@ -13,19 +16,19 @@
     <form action="form_landing.php" method="post">
         <div class="row">
 
-            <div>
+            <div class="box">
                 <label for="text">Testo Originale</label><br>
                 <textarea name="text" id="text" placeholder="Inserisci qui il tuo testo da censurare"></textarea>
             </div>
 
-            <div>
+            <div class="box">
                 <label for="badword">Parola da Censurare</label><br>
                 <input type="text" name="badword" id="badword" placeholder="Inserisci qui la parola da censurare">
+                <button type="submit">Invia e Censura</button>
             </div>
         
         </div>
 
-        <button type="submit">Invia e Censura</button>
     </form>
 </body>
 </html>

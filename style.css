@@ -4,14 +4,88 @@
     box-sizing: border-box;
 }
 
-body {
-    text-align: center;
+:root {
+    --dk_purple: #360568;
+    --purple: #5B2A86;
+    --grey: #7785AC;
+    --lightblue: #9AC6C5;
+    --lightgreen: #A5E6BA;
 }
 
-.row {
-    margin: 50px 0; 
-    display: flex;
-    justify-content: center;
-    gap: 50px;
+body {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    background-color: var(--grey);
+    color: var(--dk_purple);
+}
 
+h1 {
+    margin-top: 150px;
+    color: var(--purple);
+    font-size: 50px;
+    text-shadow: -2px 0 var(--lightgreen), 0 2px var(--lightgreen), 2px 0 var(--lightgreen), 0 -2px var(--lightgreen);
+
+}
+
+
+.row {
+    width: 50%;
+    min-height: 30vh;
+    margin: 50px auto; 
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: var(--lightblue);
+    border: 3px dashed var(--purple);
+    border-radius: 10px;
+
+}
+
+.box {
+    width: calc((100% / 2) - 50px);
+    line-height: 3;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    border: 2px solid var(--purple);
+    border-radius: 10px;
+    background-color: var(--lightgreen);
+    color: var(--purple);
+    font-family: inherit;
+    resize: none;
+    overflow-y: auto;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    border: 2px solid var(--purple);
+    border-radius: 10px;
+    background-color: var(--lightgreen);
+    color: var(--purple);
+    font-family: inherit;
+}
+
+button {
+    padding: 15px 30px;
+    border-radius: 30px;
+    color: var(--grey);
+    background-color: var(--purple);
+    border: 2px solid var(--grey);
+    font-size: 20px;
+    font-weight: 800;
+    font-family: inherit;
+    margin-top: 30px;
+    transition: all .2s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--dk_purple);
+    border: 2px solid var(--dk_purple);
+    color: var(--lightgreen);
+    scale: 1.1;
+    box-shadow: 0 12px 16px 0 rgba(54, 5, 104,0.24),0 17px 50px 0 rgba(54, 5, 104,0.19);
 }
