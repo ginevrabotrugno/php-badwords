@@ -3,6 +3,8 @@
 $text = $_POST['text'];
 $badword = $_POST['badword'];
 
+$reviewed_text = str_replace($badword, '***', $text);
+
 ?>
 
 <!DOCTYPE html>
@@ -13,15 +15,29 @@ $badword = $_POST['badword'];
     <title>PHP Badwords Result</title>
 </head>
 <body>
-    <h2>
+
+
+<div>
+    <h2>Testo Originale</h2>
+    <p>
         <?php echo $text ?>
-    </h2>
-    <h2>
-    <?php echo $badword ?>
-    </h2>
-    <h1>
-        <?php echo str_replace($badword, '***', $text) ?>
-    </h1>
+    </p>
+    <span>Il tuo testo è lungo <?php echo strlen($text) ?> caratteri </span>
+</div>
+
+<div>
+    <h2>Testo Censurato</h2>
+    <p>
+        <?php echo $reviewed_text ?>
+    </p>
+    <span>Il tuo testo è lungo <?php echo strlen($reviewed_text) ?> caratteri </span>
+</div>
+   
+   
+    
+   
+    
+    
 
 
 </body>

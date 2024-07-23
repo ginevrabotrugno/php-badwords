@@ -3,17 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>PHP Badwords</title>
 </head>
 <body>
+
     <h1>CENSURA IL TUO TESTO</h1>
 
     <form action="form_landing.php" method="post">
-        <label for="text">Testo Originale</label> <br>
-        <textarea name="text" id="text" placeholder="Inserisci qui il tuo testo da censurare"></textarea> <br>
+        <div class="row">
 
-        <label for="badword">Parola da Censurare</label><br>
-        <input type="text" name="badword" id="badword" placeholder="Inserisci qui la parola da censurare"><br>
+            <div>
+                <label for="text">Testo Originale</label><br>
+                <textarea name="text" id="text" placeholder="Inserisci qui il tuo testo da censurare"></textarea>
+            </div>
+
+            <div>
+                <label for="badword">Parola da Censurare</label><br>
+                <input type="text" name="badword" id="badword" placeholder="Inserisci qui la parola da censurare">
+            </div>
+        
+        </div>
+
         <button type="submit">Invia e Censura</button>
     </form>
 </body>
